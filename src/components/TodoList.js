@@ -1,6 +1,6 @@
 import Todo from './Todo.js';
 
-function Todos({ todos }) {
+function TodoList({ todos }) {
     return (
         <div>
             {todos.map(todo =>
@@ -13,4 +13,4 @@ function Todos({ todos }) {
     );
 }
 
-export default Todos;
+export default TodoList;

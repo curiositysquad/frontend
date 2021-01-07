@@ -1,9 +1,9 @@
-import TodoItems from './TodoItems.js';
+import Todo from './Todo.js';
 
 function Main({ todos }) {
     return (
         <main>
-            <TodoItems todos={todos} />
+            <Todo todos={todos} />
         </main>
     );
 }
