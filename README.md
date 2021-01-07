@@ -5,9 +5,13 @@ This application is a simple and sleek take on a Todo-List. We did not pull insp
 
 ---
 
-## Our Approach
+## Technologies Used
+* React
+* Location Services API
+* Weather API
 
 ---
+
 
 ## Unsolved Problems
 * Full CRUD
