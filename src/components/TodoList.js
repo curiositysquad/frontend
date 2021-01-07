@@ -13,4 +13,4 @@ function TodoList({ todos }) {
     );
 }
 
-export default Todos;
+export default TodoList;

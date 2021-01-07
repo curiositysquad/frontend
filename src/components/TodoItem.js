@@ -1,7 +1,7 @@
 function Todo ({ todo }) {
     return (
         <div className="todo">
-            <h3>{todo}</h3>
+            <h3>{todo.name}</h3>
         </div>
     );
 }
