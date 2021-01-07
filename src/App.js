@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
+import Form from './components/Form'
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
       <div className='container'>
         <Header />
+        <Form />
         <Footer />
       </div>
     </div>
