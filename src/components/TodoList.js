@@ -1,6 +1,6 @@
 import Todo from './Todo.js';
 
-function Todos({ todos }) {
+function TodoList({ todos }) {
     return (
         <div>
             {todos.map(todo =>
