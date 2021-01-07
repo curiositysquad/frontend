@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [TodoListState, setTodoListState] = useState({ todos: [] });
+
+  useEffect(() => {
+    getTodoList;
+  }, []);
+
+  function handleAdd(event, formInputs) {
+    event.preventDefault();
+    console.log(formInputs);
+  }
+  //... and pass this into the Aside
+
+  <Aside handleSubmit={handleAdd} />
+}
+
+
+function getTodoList() {
+  fetch('/TodoItems')
+    .then(response => response.json())
+    .then(json => setTodoState({ todos: json }))
+    .catch(error => console.error(error));
 }
 
 export default App;
