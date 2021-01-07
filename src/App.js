@@ -9,6 +9,7 @@ function App() {
   const [todosState, setTodoListState] = useState({ notices: [] });
   return (
     <div className="App">
+
       <div className='container'>
         <Header />
         <Footer />
