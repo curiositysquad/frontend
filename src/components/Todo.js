@@ -2,7 +2,6 @@ import { useState } from "react";
 import Form from "./Form";
 
 
-//  add props when ready
 function Todo(props) {
 
     const [formVisible, setFormVisible] = useState(false);
@@ -11,9 +10,9 @@ function Todo(props) {
         setFormVisible(!formVisible)
     }
 
-    function handleUpdate(event, form) {
+    function handleUpdate(event, todo) {
         toggleForm()
-        props.handleUpdate(event, form)
+        props.handleUpdate(event, todo)
     }
 
     return (
@@ -24,11 +23,9 @@ function Todo(props) {
                         <Form todo={props.todo} handleSubmit={handleUpdate} />
                         <button onClick={toggleForm}>Cancel</button>
                     </div>
-
                     :
-                    <div className="form">
+                    <div className="todo">
                         <h3>{props.todo.item}</h3>
-
                         <button onClick={() => props.handleDelete(props.todo)}>❌</button>
                         <button onClick={toggleForm}>Edit</button>
                     </div>

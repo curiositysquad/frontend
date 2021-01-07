@@ -6,24 +6,25 @@ function Form(props) {
         item: '',
     });
 
-    useEffect(()=>{
-        if(props.todo){
+    useEffect(() => {
+        if (props.todo) {
             setFormState({
                 item: props.todo.item,
+                id: props.todo.id
             })
         }
-    },[props.todo])
+    }, [props.todo])
 
     function handleChange(event) {
         setFormState(prevState => ({
-        ...prevState,
-        [event.target.id] : event.target.value
+            ...prevState,
+            [event.target.id]: event.target.value
         }));
     }
 
-    function handleSubmit(event){
+    function handleSubmit(event) {
         event.preventDefault();
-        if(props.todo) formState.id=props.todo.id
+        if (props.todo) formState.id = props.todo.id
         props.handleSubmit(event, formState);
     }
     return (
@@ -36,8 +37,8 @@ function Form(props) {
                 value={formState.todo}
                 id="todo"
             />
-            
-            <input type="submit" value={props.todo ? 'Edit todo' : 'Add todo'}/>
+
+            <input type="submit" value={props.todo ? 'Edit todo' : 'Add todo'} />
         </form>
     );
 }

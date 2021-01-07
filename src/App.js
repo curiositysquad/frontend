@@ -57,6 +57,7 @@ function App() {
       method: 'PUT',
       body: JSON.stringify(formInputs),
       headers: {
+        'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'Application/json'
       }
     })

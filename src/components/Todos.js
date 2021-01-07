@@ -1,6 +1,6 @@
 import Todo from './Todo.js';
 
-//  add  reviews, handleDelete, handleUpdate  when ready as props
+
 
 function Todos({ todos, handleDelete, handleUpdate }) {
     return (
