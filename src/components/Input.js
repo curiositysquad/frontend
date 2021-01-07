@@ -1,16 +1,16 @@
 function Input({
-    name,
     todo,
-    value,
+    title,
     type,
+    value,
     placeholder,
     handleChange }) {
     return (
         <>
-            <label htmlFor={name}>{todo}</label>
+            <label htmlFor={todo}>{title}</label>
             <input
-                id={name}
-                name={name}
+                id={todo}
+                todo={todo}
                 type={type}
                 value={value}
                 onChange={handleChange}
@@ -19,5 +19,4 @@ function Input({
         </>
     );
 }
-
 export default Input;

@@ -1,13 +1,13 @@
-import TodoList from './TodoList.js';
+import Todos from "./Todos.js";
 
-function Main({ todos }) {
+function Main({ todos, handleDelete, handleUpdate }) {
     return (
         <main>
-            <TodoList
+            <Todos
                 todos={todos}
+                handleDelete={handleDelete}
+                handleUpdate={handleUpdate}
             />
-
-
         </main>
     );
 }
