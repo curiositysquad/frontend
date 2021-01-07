@@ -28,7 +28,7 @@ function Form(props) {
                 id="todo"
             />
 
-            <input type="submit" value="add a notice" />
+            <input type="submit" value="+" />
         </form>
     );
 }

@@ -1,9 +1,13 @@
-import Todo from './Todo.js';
+import TodoList from './TodoList.js';
 
 function Main({ todos }) {
     return (
         <main>
-            <Todo todos={todos} />
+            <TodoList
+                todos={todos}
+            />
+
+
         </main>
     );
 }

@@ -1,7 +1,7 @@
-function Todo({ todo }) {
+function Todo({ todos }) {
     return (
         <div className="todo">
-            <h3>{todo.name}</h3>
+            <h3>{todos}</h3>
         </div>
     );
 }
