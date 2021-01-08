@@ -1,23 +1,24 @@
 function Input({
-    name,
     todo,
-    value,
+    item,
+    title,
     type,
+    value,
     placeholder,
     handleChange }) {
+        console.log(value)
     return (
         <>
-            <label htmlFor={name}>{todo}</label>
+            <label htmlFor={todo}>{title}</label>
             <input
-                id={name}
-                name={name}
+                // id={todo}
+                todo={todo}
                 type={type}
-                value={value}
+                value={item}
                 onChange={handleChange}
                 placeholder={placeholder}
             />
         </>
     );
 }
-
 export default Input;

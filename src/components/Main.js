@@ -1,9 +1,13 @@
-import Todo from './Todo.js';
+import Todos from "./Todos.js";
 
-function Main({ todos }) {
+function Main({ todos, handleDelete, handleUpdate }) {
     return (
         <main>
-            <Todo todos={todos} />
+            <Todos
+                todos={todos}
+                handleDelete={handleDelete}
+                handleUpdate={handleUpdate}
+            />
         </main>
     );
 }

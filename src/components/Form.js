@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Input from './Input.js';
 
 function Form(props) {
     const [formState, setFormState] = useState({
-        todo: ''
+        item: '',
     });
+
+    useEffect(() => {
+        if (props.todo) {
+            setFormState({
+                item: props.todo.item,
+                id: props.todo.id
+            })
+        }
+    }, [props.todo])
 
     function handleChange(event) {
         setFormState(prevState => ({
@@ -15,20 +24,21 @@ function Form(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
+        if (props.todo) formState.id = props.todo.id
         props.handleSubmit(event, formState);
     }
     return (
         <form onSubmit={handleSubmit}>
             <Input
                 handleChange={handleChange}
-                name="Todo"
-                placeholder="Add Todo"
+                name="todo"
+                // placeholder="Todo"
                 type="text"
-                value={formState.title}
+                value={formState.item}
                 id="todo"
             />
 
-            <input type="submit" value="add a notice" />
+            <input type="submit" value={props.todo ? 'Edit todo' : 'Add todo'} />
         </form>
     );
 }
