@@ -32,9 +32,9 @@ function Form(props) {
             <Input
                 handleChange={handleChange}
                 name="todo"
-                placeholder="Todo"
+                // placeholder="Todo"
                 type="text"
-                value={formState.todo}
+                value={formState.item}
                 id="todo"
             />
 
