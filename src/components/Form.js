@@ -9,22 +9,17 @@ function Form(props) {
     useEffect(() => {
         if (props.todo) {
             setFormState({
-                item: props.todo.item,
-                id: props.todo.id
-            })
+                item: props.todo.item
+            });
         }
-    }, [props.todo])
+    }, [props.todo]);
 
     function handleChange(event) {
-        setFormState(prevState => ({
-            ...prevState,
-            [event.target.id]: event.target.value
-        }));
+        setFormState({ item: event.target.value });
     }
 
     function handleSubmit(event) {
         event.preventDefault();
-        if (props.todo) formState.id = props.todo.id
         props.handleSubmit(event, formState);
     }
     return (
