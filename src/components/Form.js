@@ -1,21 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Input from './Input.js';
 
 function Form(props) {
-    const [formState, setFormState] = useState({
-        item: '',
-    });
-
-    useEffect(() => {
-        if (props.todo) {
-            setFormState({
-                item: props.todo.item
-            });
-        }
-    }, [props.todo]);
+    const [formState, setFormState] = useState(
+        props.todo || { item: "" }
+    );
 
     function handleChange(event) {
-        setFormState({ item: event.target.value });
+        const updated = { ...formState, item: event.target.value }
+        setFormState(updated)
+
     }
 
     function handleSubmit(event) {
