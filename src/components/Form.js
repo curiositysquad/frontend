@@ -1,30 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Input from './Input.js';
 
 function Form(props) {
-    const [formState, setFormState] = useState({
-        item: '',
-    });
-
-    useEffect(() => {
-        if (props.todo) {
-            setFormState({
-                item: props.todo.item,
-                id: props.todo.id
-            })
-        }
-    }, [props.todo])
+    const [formState, setFormState] = useState(
+        props.todo || { item: "" }
+    );
 
     function handleChange(event) {
-        setFormState(prevState => ({
-            ...prevState,
-            [event.target.id]: event.target.value
-        }));
+        const updated = { ...formState, item: event.target.value }
+        setFormState(updated)
+
     }
 
     function handleSubmit(event) {
         event.preventDefault();
-        if (props.todo) formState.id = props.todo.id
         props.handleSubmit(event, formState);
     }
     return (

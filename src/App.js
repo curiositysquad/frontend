@@ -73,7 +73,8 @@ function App() {
       <div className='container'>
         <Header />
         <Aside handleSubmit={handleAdd} />
-        <Main todos={todosState.todos} handleDelete={handleDelete} handleUpdate={handleUpdate} />
+        <Main
+          todos={todosState.todos} handleDelete={handleDelete} handleUpdate={handleUpdate} />
         <Footer />
       </div>
     </div>
