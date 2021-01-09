@@ -13,6 +13,7 @@ function App() {
 
   function handleAdd(event, formInputs) {
     event.preventDefault()
+    console.log(formInputs)
     fetch('/todos', {
       body: JSON.stringify(formInputs),
       method: 'POST',
@@ -81,3 +82,4 @@ function App() {
 }
 
 export default App;
+
