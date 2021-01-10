@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getCurrentLatLng } from '../services/geolocation';
 import { getCurWeatherByLatLng } from '../services/weather-api'
+import './styles/Header.css'
 
 function Header(props) {
 
@@ -35,7 +36,7 @@ function Header(props) {
 
 
     return (
-        <header>
+        <header className="Header">
             {appData.temp && 
                 <div>{appData.temp}&deg;</div>
             }
