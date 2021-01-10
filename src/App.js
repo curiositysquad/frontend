@@ -5,10 +5,12 @@ import Header from './components/Header';
 import Main from './components/Main';
 import './App.css';
 
+
 function App() {
+
   const [todosState, setTodosState] = useState({ todos: [] });
   useEffect(() => {
-    getTodos()
+    getTodos();
   }, [])
 
   function handleAdd(event, formInputs) {
@@ -70,13 +72,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className='container'>
-        <Header />
+        <Header className="App-header"/>
         <Aside handleSubmit={handleAdd} />
         <Main
           todos={todosState.todos} handleDelete={handleDelete} handleUpdate={handleUpdate} />
         <Footer />
-      </div>
     </div>
   );
 }
