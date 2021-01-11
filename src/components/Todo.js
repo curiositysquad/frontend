@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Form from "./Form";
+import './styles/Todo.css'
 
 
 function Todo(props) {
@@ -26,8 +27,9 @@ function Todo(props) {
                     :
                     <div className="todo">
                         <h3>{props.todo.item}</h3>
-                        <button onClick={() => props.handleDelete(props.todo)}>❌</button>
-                        <button onClick={toggleForm}>Edit</button>
+                        <button className="editbuttons" onClick={toggleForm}>Edit</button>
+                        <button className="editbuttons" onClick={() => props.handleDelete(props.todo)}>X</button>
+
                     </div>
             }
         </>

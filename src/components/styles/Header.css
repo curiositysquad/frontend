@@ -1,3 +1,14 @@
 .Header {
-    
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.degree {
+    color: white;
+    font-size: 40px;
+}
+
+img {
+    size: 40px;
 }

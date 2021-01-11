@@ -79,8 +79,8 @@ function App() {
         <Main
           todos={todosState.todos} handleDelete={handleDelete} handleUpdate={handleUpdate} />
         <Footer />
-        
-          </div>
+
+      </div>
     </div>
   );
 }

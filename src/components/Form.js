@@ -19,16 +19,17 @@ function Form(props) {
     }
     return (
         <form onSubmit={handleSubmit}>
+            <h1>What is your main focus for today?</h1>
             <Input
                 handleChange={handleChange}
                 name="todo"
-                placeholder="What do you need to do?"
+                placeholder=""
                 type="text"
                 value={formState.item}
                 id="todo"
             />
 
-            <input className="Button" type="submit" value={props.todo ? 'Edit' : 'Add'} />
+            <input className="Button" type="submit" value={props.todo ? 'Edit' : '+'} />
         </form>
     );
 }

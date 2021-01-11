@@ -6,9 +6,33 @@
 }
 
 .Container {
-  background-image: url('./components/styles/fryepic.jpg');
+  background-image: url('./components/styles/water.png');
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+  display: table-cell;
+  width: 400px;
+  border-bottom: 1px solid white;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-right: 20px;
 }
