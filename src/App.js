@@ -40,7 +40,7 @@ function App() {
   }
 
   function handleDelete(deletedTodo) {
-    fetch(`/todos/${deletedTodo.id}`, {
+    fetch(`https://morementum-api.herokuapp.com/todos/${deletedTodo.id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -56,7 +56,7 @@ function App() {
 
   function handleUpdate(event, formInputs) {
     event.preventDefault()
-    fetch(`/todos/${formInputs.id}`, {
+    fetch(`https://morementum-api.herokuapp.com/todos/${formInputs.id}`, {
       method: 'PUT',
       body: JSON.stringify(formInputs),
       headers: {
