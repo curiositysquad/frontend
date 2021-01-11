@@ -19,7 +19,7 @@ function Form(props) {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <h1>What is your main focus for today?</h1>
+
             <Input
                 handleChange={handleChange}
                 name="todo"

@@ -24,8 +24,7 @@ input[type="text"] {
   border: none;
   color: white;
   font-weight: 200;
-  font-size: 20px;
-  display: table-cell;
+  font-size: 30px;
   width: 400px;
   border-bottom: 1px solid white;
 }
@@ -33,6 +32,5 @@ input[type="text"] {
 main {
   display: flex;
   justify-content: flex-end;
-  margin-top: 50px;
   margin-right: 20px;
 }

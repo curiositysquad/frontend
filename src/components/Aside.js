@@ -4,8 +4,8 @@ import './styles/Aside.css'
 function Aside(props) {
     return (
         <aside className="Aside">
-            {/* <h1>Aside</h1> */}
-            <Form handleSubmit={props.handleSubmit}/>
+            <h1>What is your main focus for today?</h1>
+            <Form handleSubmit={props.handleSubmit} />
         </aside>
     );
 }
