@@ -16,7 +16,7 @@ function App() {
   function handleAdd(event, formInputs) {
     event.preventDefault()
     console.log(formInputs)
-    fetch('https://morementum-api.herokuapp.com/todos/', {
+    fetch('https://morementum-api.herokuapp.com/todos', {
       body: JSON.stringify(formInputs),
       method: 'POST',
       headers: {
@@ -33,7 +33,7 @@ function App() {
   }
 
   function getTodos() {
-    fetch('https://morementum-api.herokuapp.com/todos/')
+    fetch('https://morementum-api.herokuapp.com/todos')
       .then(res => res.json())
       .then(data => setTodosState({ todos: data }))
       .catch(error => console.error(error));
