@@ -1,9 +1,9 @@
-function Footer(props) {
+import './styles/Footer.css'
+
+export default function Footer(props) {
     return (
-        <footer>
-            <h1>Footer</h1>
+        <footer className="Footer">
+            <p>Copyright &copy; Morementum {new Date().getFullYear()} All Rights Reserved</p>
         </footer>
     );
 }
-
-export default Footer;

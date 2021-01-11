@@ -1,21 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Input from './Input.js';
+import './styles/Form.css'
 
 function Form(props) {
-    const [formState, setFormState] = useState({
-        item: '',
-    });
-
-    useEffect(() => {
-        if (props.todo) {
-            setFormState({
-                item: props.todo.item
-            });
-        }
-    }, [props.todo]);
+    const [formState, setFormState] = useState(
+        props.todo || { item: "" }
+    );
 
     function handleChange(event) {
-        setFormState({ item: event.target.value });
+        const updated = { ...formState, item: event.target.value }
+        setFormState(updated)
+
     }
 
     function handleSubmit(event) {
@@ -27,13 +22,13 @@ function Form(props) {
             <Input
                 handleChange={handleChange}
                 name="todo"
-                // placeholder="Todo"
+                placeholder="What do you need to do?"
                 type="text"
                 value={formState.item}
                 id="todo"
             />
 
-            <input type="submit" value={props.todo ? 'Edit todo' : 'Add todo'} />
+            <input className="Button" type="submit" value={props.todo ? 'Edit' : 'Add'} />
         </form>
     );
 }

@@ -1,9 +1,10 @@
 import Form from './Form.js';
+import './styles/Aside.css'
 
 function Aside(props) {
     return (
-        <aside>
-            <h1>Aside</h1>
+        <aside className="Aside">
+            {/* <h1>Aside</h1> */}
             <Form handleSubmit={props.handleSubmit}/>
         </aside>
     );
