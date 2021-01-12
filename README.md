@@ -39,16 +39,12 @@ The 'rough' list of steps taken was then:
 ---
 
 ## Unsolved Problems
-* Deployment of project
 
 ---
 
 ## Dev Notes
-* TODO:
-    * Clock
-    * Styling
 
 ---
 
 ## Live Link!
-Ask, and you shall [receive]().
+Ask, and you shall [receive](morementum.herokuapp.com).
