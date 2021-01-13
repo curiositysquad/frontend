@@ -23,7 +23,8 @@ function Header(props) {
       lat,
       lng,
       temp: Math.round(weatherData.main.temp),
-      icon: weatherData.weather[0].icon
+      icon: weatherData.weather[0].icon,
+      name: weatherData.name,
     });
 
   }
@@ -46,6 +47,9 @@ function Header(props) {
       }
       {appData.temp &&
         <div className="degree">{appData.temp}&deg;</div>
+      }
+      {appData.name &&
+        <div className="City">{appData.name}</div>
       }
 
     </header>
